@@ -28,107 +28,107 @@ describe('Android Sensor tests', () => {
     // });
 
 
-    // it('test_wifi', async () => {
+    it('test_wifi', async () => {
         
-        // await delay(3000);
+        await delay(3000);
 
-        // await driver.startActivity(app_package,app_package_activity_2 )
-        // expect(await(await sensorPage.connected).isDisplayed()).equal(true);
-        // let connected = await(await sensorPage.connected).getText();
-        // expect(connected).equal('Connected');
+        await driver.startActivity(app_package,app_package_activity_2 )
+        expect(await(await sensorPage.connected).isDisplayed()).equal(true);
+        let connected = await(await sensorPage.connected).getText();
+        expect(connected).equal('Connected');
 
-        // await driver.toggleWiFi();
-        // await delay(5000);
+        await driver.toggleWiFi();
+        await delay(5000);
 
-        // expect(await(await sensorPage.disconnected).isDisplayed()).equal(true);
-        // let disconnected = await(await sensorPage.disconnected).getText();
-        // expect(disconnected).equal('Off');
+        expect(await(await sensorPage.disconnected).isDisplayed()).equal(true);
+        let disconnected = await(await sensorPage.disconnected).getText();
+        expect(disconnected).equal('Off');
 
-        // await driver.toggleWiFi();
-        // await delay(8000);
-        // expect(await(await sensorPage.connected).isDisplayed()).equal(true);
-        // let again_connected = await(await sensorPage.connected).getText();
-        // expect(again_connected).equal('Connected');
+        await driver.toggleWiFi();
+        await delay(8000);
+        expect(await(await sensorPage.connected).isDisplayed()).equal(true);
+        let again_connected = await(await sensorPage.connected).getText();
+        expect(again_connected).equal('Connected');
 
-    // });
+    });
 
-    // it('blutooh_on_off', async () => {
+    it('blutooh_on_off', async () => {
         
 
 
-        // await driver.startActivity(app_package,app_package_activity_1 )
+        await driver.startActivity(app_package,app_package_activity_1 )
+
+        await(await sensorPage.conns).click()
+        await delay(3000);
+
+        expect(await(await sensorPage.blue).isDisplayed()).equal(true);
+        let b_off = await(await sensorPage.blue).getText();
+        expect(b_off).equal('Off');
+
+        await(await sensorPage.blue).click()
+        await delay(2000);
+
+        expect(await(await sensorPage.blue).isDisplayed()).equal(true);
+        let b_on = await(await sensorPage.blue).getText();
+        expect(b_on).equal('On');
+
+        await(await sensorPage.blue).click()
+        await delay(2000);
+
+        await delay(2000);
+        expect(await(await sensorPage.blue).isDisplayed()).equal(true);
+        let a_b_off = await(await sensorPage.blue).getText();
+        expect(a_b_off).equal('Off');
+
 
         // await(await sensorPage.conns).click()
-        // await delay(3000);
 
-        // expect(await(await sensorPage.blue).isDisplayed()).equal(true);
-        // let b_off = await(await sensorPage.blue).getText();
+        // driver.startActivity(app_package,"com.android.settings.Settings$BluetoothSettingsActivity")
+
+        // await delay(3000);
+        // expect(await(await sensorPage.blutooth_off).isDisplayed()).equal(true);
+        // let b_off = await(await sensorPage.blutooth_off).getText();
         // expect(b_off).equal('Off');
 
-        // await(await sensorPage.blue).click()
-        // await delay(2000);
+        // await(await sensorPage.blutooth_switch).click()
 
-        // expect(await(await sensorPage.blue).isDisplayed()).equal(true);
-        // let b_on = await(await sensorPage.blue).getText();
+        // expect(await(await sensorPage.blutooth_on).isDisplayed()).equal(true);
+        // let b_on = await(await sensorPage.blutooth_on).getText();
         // expect(b_on).equal('On');
 
-        // await(await sensorPage.blue).click()
-        // await delay(2000);
+        // await(await sensorPage.blutooth_switch).click()
 
-        // await delay(2000);
-        // expect(await(await sensorPage.blue).isDisplayed()).equal(true);
-        // let a_b_off = await(await sensorPage.blue).getText();
+        // await delay(5000);
+        // expect(await(await sensorPage.blutooth_off).isDisplayed()).equal(true);
+        // let a_b_off = await(await sensorPage.blutooth_off).getText();
         // expect(a_b_off).equal('Off');
 
-
-    //     // await(await sensorPage.conns).click()
-
-    //     // driver.startActivity(app_package,"com.android.settings.Settings$BluetoothSettingsActivity")
-
-    //     // await delay(3000);
-    //     // expect(await(await sensorPage.blutooth_off).isDisplayed()).equal(true);
-    //     // let b_off = await(await sensorPage.blutooth_off).getText();
-    //     // expect(b_off).equal('Off');
-
-    //     // await(await sensorPage.blutooth_switch).click()
-
-    //     // expect(await(await sensorPage.blutooth_on).isDisplayed()).equal(true);
-    //     // let b_on = await(await sensorPage.blutooth_on).getText();
-    //     // expect(b_on).equal('On');
-
-    //     // await(await sensorPage.blutooth_switch).click()
-
-    //     // await delay(5000);
-    //     // expect(await(await sensorPage.blutooth_off).isDisplayed()).equal(true);
-    //     // let a_b_off = await(await sensorPage.blutooth_off).getText();
-    //     // expect(a_b_off).equal('Off');
-
-    // });
+    });
 
 
-    //     it('orientation', async () => {
+        it('orientation', async () => {
         
-    //     await delay(3000);
+        await delay(3000);
 
-    //     await driver.startActivity(app_package,app_package_activity_1 )
-    //     // expect(await(await sensorPage.connected).isDisplayed()).equal(true);
+        await driver.startActivity(app_package,app_package_activity_1 )
+        // expect(await(await sensorPage.connected).isDisplayed()).equal(true);
 
-    //     let orientation = await driver.getOrientation();
-    //     expect(orientation).equal('PORTRAIT');
+        let orientation = await driver.getOrientation();
+        expect(orientation).equal('PORTRAIT');
 
-    //     await delay(5000);
-    //     await driver.setOrientation("LANDSCAPE");
+        await delay(5000);
+        await driver.setOrientation("LANDSCAPE");
 
-    //     let orientation_1 = await driver.getOrientation();
-    //     expect(orientation_1).equal('LANDSCAPE');
+        let orientation_1 = await driver.getOrientation();
+        expect(orientation_1).equal('LANDSCAPE');
 
-    //     await delay(5000);
-    //     await driver.setOrientation("PORTRAIT");
+        await delay(5000);
+        await driver.setOrientation("PORTRAIT");
 
-    //     let a_orientation = await driver.getOrientation();
-    //     expect(a_orientation).equal('PORTRAIT');
+        let a_orientation = await driver.getOrientation();
+        expect(a_orientation).equal('PORTRAIT');
 
-    // });
+    });
 
 
     it('location', async () => {
