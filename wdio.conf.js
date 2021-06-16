@@ -57,10 +57,10 @@ exports.config = {
     capabilities: [{
         maxInstances: 1,
         platformName: 'Android',
-        // 'appium:platformVersion': '11',
-        'appium:platformVersion': '9',
-        // 'appium:deviceName': 'emulator-5554',
-        'appium:deviceName': '2220c33e10037ece',
+        'appium:platformVersion': '11',
+        // 'appium:platformVersion': '9',
+        'appium:deviceName': 'emulator-5554',
+        // 'appium:deviceName': '2220c33e10037ece',
         'appium:browserName': '',                        // browser name is empty for native apps
         'appium:orientation': 'PORTRAIT',
         'appium:app':'apk/evaly.apk',          // Path to your native app

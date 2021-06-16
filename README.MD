@@ -12,3 +12,4 @@
     ## run single test
 
     $ npx wdio run ./wdio.conf.js --spec wifi.test.js
+    $ npx wdio run ./wdio.conf.js --spec sensor.test.js
