@@ -63,7 +63,7 @@ exports.config = {
         // 'appium:deviceName': '2220c33e10037ece',
         'appium:browserName': '',                        // browser name is empty for native apps
         'appium:orientation': 'PORTRAIT',
-        'appium:app':'apk/evaly.apk',          // Path to your native app
+        // 'appium:app':'apk/evaly.apk',          // Path to your native app
         'appium:appPackage': 'com.android.settings',  // Package name of your app
         'appium:appActivity': 'com.android.settings.Settings', // App activity of the app 
         'appium:automationName': 'UiAutomator2',
