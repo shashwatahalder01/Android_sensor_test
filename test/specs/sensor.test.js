@@ -61,10 +61,11 @@ describe('Android Sensor tests', () => {
         await delay(3000);
 
         await(await sensorPage.blue_sw).click()
-        await delay(3000);
+        await delay(5000);
 
         expect(await(await sensorPage.blue_Device).isDisplayed()).equal(true);
         await delay(3000);
+
         await(await sensorPage.blue_sw).click()
         await delay(3000);
 
@@ -99,6 +100,12 @@ describe('Android Sensor tests', () => {
 
 
     // it('location', async () => {
+
+        driver.touchAction([
+            {action: 'press', x: 33, y: 1408},
+            {action: 'moveTo', x: 8, y: 623},
+            'release'
+          ]);
         
     //     await driver.startActivity(app_package,app_package_activity_setting_home )
     //     await delay(3000);

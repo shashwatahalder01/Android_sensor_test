@@ -81,28 +81,6 @@ describe('Android Sensor tests', () => {
         expect(a_b_off).equal('Off');
 
 
-        // await(await sensorPage.conns).click()
-
-        // driver.startActivity(app_package,"com.android.settings.Settings$BluetoothSettingsActivity")
-
-        // await delay(3000);
-        // expect(await(await sensorPage.blutooth_off).isDisplayed()).equal(true);
-        // let b_off = await(await sensorPage.blutooth_off).getText();
-        // expect(b_off).equal('Off');
-
-        // await(await sensorPage.blutooth_switch).click()
-
-        // expect(await(await sensorPage.blutooth_on).isDisplayed()).equal(true);
-        // let b_on = await(await sensorPage.blutooth_on).getText();
-        // expect(b_on).equal('On');
-
-        // await(await sensorPage.blutooth_switch).click()
-
-        // await delay(5000);
-        // expect(await(await sensorPage.blutooth_off).isDisplayed()).equal(true);
-        // let a_b_off = await(await sensorPage.blutooth_off).getText();
-        // expect(a_b_off).equal('Off');
-
     });
 
 
