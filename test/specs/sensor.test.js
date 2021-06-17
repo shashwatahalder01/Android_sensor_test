@@ -99,52 +99,6 @@ describe('Android Sensor tests', () => {
     });
 
 
-    // it('location', async () => {
-
-        driver.touchAction([
-            {action: 'press', x: 33, y: 1408},
-            {action: 'moveTo', x: 8, y: 623},
-            'release'
-          ]);
-        
-    //     await driver.startActivity(app_package,app_package_activity_setting_home )
-    //     await delay(3000);
-    //     // size = driver.getWindowRect();
-    //     // endY = parseInt(size.height * 0.70);
-    //     // startY = parseInt(size.height * 0.30);
-    //     // startX = (size.width / 2);
-    //     // driver.touchPerform([
-    //     //     { action: 'press', options: { x: 10, y: 200 }},
-    //     //     { action: 'moveTo', options: { x: 10, y: 800 }},
-    //     //     { action: 'release' }
-    //     //   ]);
-    //     // await driver.touchScroll(10, 200)
-
-
-        
-    //     // await driver.scrollTo(sensorPage.location_s)
-    //     await delay(3000);
-    //     await(await sensorPage.location).click()
-    //     await delay(20000);
-    //     // expect(await(await sensorPage.location_off).isDisplayed()).equal(true);
-    //     // let l_off = await(await sensorPage.location_off).getText();
-    //     // expect(l_off).equal('Location is off');
-
-    //     // await driver.toggleLocationServices();
-    //     // await delay(20000);
-
-    //     // expect(await(await sensorPage.location_off).isDisplayed()).equal(true);
-    //     // let l_on = await(await sensorPage.location_off).getText();
-    //     // expect(l_on).not.equal('On');
-
-    //     // await driver.toggleLocationServices();
-    //     // await delay(2000);
-
-    //     // expect(await(await sensorPage.location_off).isDisplayed()).equal(true);
-    //     // let a_l_off = await(await sensorPage.location_off).getText();
-    //     // expect(l_off).equal('Location is off');
-    // });
-
     afterEach(() => {
         driver.closeApp();
     });
@@ -155,11 +109,6 @@ describe('Android Sensor tests', () => {
 })
 
 
-
-// adb shell service call bluetooth_manager 6
-// To disable:
-
-// adb shell service call bluetooth_manager 8
 
 
 
