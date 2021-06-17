@@ -52,18 +52,21 @@ describe('Android Sensor tests', () => {
         await driver.startActivity(app_package,app_package_activity_setting_home )
 
         await(await sensorPage.connected_device).click()
-        await delay(5000);
+        await delay(3000);
 
         await(await sensorPage.connected_preference).click()
-        await delay(5000);
+        await delay(3000);
 
         await(await sensorPage.blue).click()
-        await delay(5000);
+        await delay(3000);
 
         await(await sensorPage.blue_sw).click()
-        await delay(5000);
+        await delay(3000);
 
         expect(await(await sensorPage.blue_Device).isDisplayed()).equal(true);
+        await delay(3000);
+        await(await sensorPage.blue_sw).click()
+        await delay(3000);
 
 
 
@@ -72,7 +75,7 @@ describe('Android Sensor tests', () => {
 
         it('orientation', async () => {
         
-        await delay(3000);
+        await delay(2000);
 
         await driver.startActivity(app_package,app_package_activity_setting_home )
         // expect(await(await sensorPage.connected).isDisplayed()).equal(true);
@@ -80,13 +83,13 @@ describe('Android Sensor tests', () => {
         let orientation = await driver.getOrientation();
         expect(orientation).equal('PORTRAIT');
 
-        await delay(5000);
+        await delay(2000);
         await driver.setOrientation("LANDSCAPE");
 
         let orientation_1 = await driver.getOrientation();
         expect(orientation_1).equal('LANDSCAPE');
 
-        await delay(5000);
+        await delay(2000);
         await driver.setOrientation("PORTRAIT");
 
         let a_orientation = await driver.getOrientation();
