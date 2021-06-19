@@ -163,6 +163,8 @@ describe('Android Sensor tests', () => {
 
     });
 
+    
+
 
     afterEach(() => {
         driver.closeApp();
