@@ -52,8 +52,9 @@ get switch_wifi() { return $('//android.widget.Switch[@resource-id="com.android.
 
 // get location() { return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[7]/android.widget.RelativeLayout/android.widget.TextView[1]'); }
 // get location() { return $('//android.widget.TextView[@text="Battery"]'); }
-get location() { return $('//android.widget.TextView[@text="Location"]'); }
-location_s = '//android.widget.TextView[@text="Location"]'
+// get location() { return $('//android.widget.TextView[@text="Location"]'); }
+get location_switch() { return $('//android.widget.Switch[@resource-id="com.android.settings:id/switch_widget"]'); }
+// location_s = '//android.widget.TextView[@text="Location"]'
 // get location_off() { return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[5]/android.widget.RelativeLayout/android.widget.TextView[2]'); }
 
 
@@ -63,6 +64,30 @@ get connected_preference() { return $('//hierarchy/android.widget.FrameLayout/an
 get blue() { return $('//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView'); }
 get blue_sw() { return $('//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Switch'); }
 get blue_Device() { return $('//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView[1]'); }
+
+
+
+
+
+
+
+
+
+
+
+
+get wifi_() { return $('//android.widget.Switch[@content-desc="Wi-Fi,AndroidWifi"]'); }
+get blue_() { return $('//android.widget.Switch[@content-desc="Bluetooth."]'); }
+get Mdata_() { return $('//android.widget.Switch[@content-desc="Mobile data"]'); }
+get Airplane_() { return $('//android.widget.Switch[@content-desc="Airplane mode"]'); }
+get location_() { return $('//android.widget.Switch[@content-desc="Location"]'); }
+
+
+
+
+
+
+
 
 
 

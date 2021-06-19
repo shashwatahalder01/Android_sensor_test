@@ -7,6 +7,7 @@ const multiremote = require('webdriverio');
 const app_package = "com.android.settings"
 const app_package_activity_setting_home = "com.android.settings.Settings"
 const app_package_activity_wifi = "com.android.settings.Settings$WifiSettings2Activity"
+const app_package_activity_location = "com.android.settings.Settings$LocationSettingsActivity"
 
 
 describe('Android Sensor tests', () => {
@@ -24,7 +25,7 @@ describe('Android Sensor tests', () => {
     // });
 
 
-    it('test_wifi', async () => {
+    it('wifi', async () => {
         
         await delay(3000);
 
@@ -45,7 +46,7 @@ describe('Android Sensor tests', () => {
 
     });
 
-    it('blutooh_on_off', async () => {
+    it('blutooh', async () => {
         
 
 
@@ -95,6 +96,70 @@ describe('Android Sensor tests', () => {
 
         let a_orientation = await driver.getOrientation();
         expect(a_orientation).equal('PORTRAIT');
+
+    });
+
+    // it('airplane mode', async () => {
+        
+    //     await delay(2000);
+    //     await driver.openNotifications();
+    //     await delay(2000);
+    //     await driver.toggleAirplaneMode();      
+    //     await delay(3000);
+    //     let status_airplane_on = await (await sensorPage.Airplane_).getText()
+    //     expect(status_airplane_on).equal('On')
+    //     console.log('turnedon airplane mode')
+
+    //     await driver.toggleAirplaneMode();
+    //     await delay(3000);
+    //     let status_airplane_off = await (await sensorPage.Airplane_).getText()
+    //     expect(status_airplane_off).equal('Off')
+    //     console.log('turnedoff airplane mode')
+
+    // });
+
+    it(' data', async () => {
+           
+        // await delay(2000);
+        await driver.openNotifications();
+        await delay(3000);
+        await driver.toggleData();  
+        await delay(3000);
+        let status_Mdata_on = await (await sensorPage.Mdata_).getText()
+        expect(status_Mdata_on).equal('On')
+        console.log('turnedon data ')
+        await delay(3000);
+
+        await driver.toggleData();
+        await delay(3000);
+        let status_Mdata_off = await (await sensorPage.Mdata_).getText()
+        expect(status_Mdata_off).equal('Off')
+        console.log('turnedoff data ')
+        await driver.back()
+        
+    });
+
+    it(' location', async () => {
+
+        // await delay(2000);
+        await driver.openNotifications();
+        await delay(2000);
+        // await driver.toggleLocationServices();
+        await (await sensorPage.location_).click()
+        await delay(3000); 
+        let status_location_on = await (await sensorPage.location_).getText()
+        expect(status_location_on).equal('On')
+        console.log('turnedon data ')
+        await delay(3000);
+
+        // await driver.toggleLocationServices();
+        await (await sensorPage.location_).click()
+        await delay(3000);
+        let status_location_off = await (await sensorPage.location_).getText()
+        expect(status_location_off).equal('Off')
+        console.log('turnedoff data ')
+        await driver.back()
+        
 
     });
 
