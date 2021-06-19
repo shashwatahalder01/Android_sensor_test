@@ -1,6 +1,5 @@
 # Android sensor testing
 
-## change Apk path irn wdio.conf.js
 ## all sensors must be off except wifi
 
 ## run 
